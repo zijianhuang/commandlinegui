@@ -1,0 +1,2 @@
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe CommandLineGui.msbuild  /p:DebugSymbols=false /p:DebugType=None  /p:AllowedReferenceRelatedFileExtensions=none /p:outdir=c:\release\CommandLineGui\
+pause

@@ -1,0 +1,13 @@
+NUMBER=8
+Equal=7
+IntRange=2
+Hyphen=4
+Slash=3
+Colon=6
+QuotedString=5
+WS=9
+LiteralText=1
+'-'=4
+'='=7
+':'=6
+'/'=3

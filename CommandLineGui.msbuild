@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Release build; pack all assemblies into a zip file for deployment.
+To build, run in VS prompt with
+msbuild commandlinegui.msbuild /p:outdir=d:\release\commandlinegui\ /p:PostBuildevent=
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"  DefaultTargets="Build;PackRobocopyGui">
+  <PropertyGroup>
+    <Configuration>Release</Configuration>
+    <Platform>Any CPU</Platform>
+    <SolutionDir></SolutionDir>
+    <SolutionExt>.sln</SolutionExt>
+    <SolutionFileName>CommandLineGui.sln</SolutionFileName>
+    <SolutionName>CommandLineGui</SolutionName>
+    <SolutionPath>CommandLineGui.sln</SolutionPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+      </SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+
+    <TPath>C:\Program Files (x86)\MSBuild\ExtensionPack\4.0\MSBuild.ExtensionPack.tasks</TPath>
+    <ETPath>C:\Program Files (x86)\MSBuild\ExtensionPack\4.0\</ETPath>
+
+  </PropertyGroup>
+
+  <Import Project="$(TPath)"/>
+
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildArtifactsDir Include="BuildArtifacts\" />
+    <SolutionFile Include="CommandLineGui.sln" />
+
+  </ItemGroup>
+  
+  
+
+  <Target Name="Build" Outputs="@(CollectedBuildOutput)">
+    <MSBuild Projects="@(SolutionFile)" Targets="Rebuild" BuildInParallel="True"
+             Properties="BuildingSolutionFile=true; Configuration=$(Configuration); Platform=$(Platform); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath); WarningLevel=3"
+             SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput"/>
+
+    </MSBuild>
+
+  </Target>
+ 
+
+
+  <Target Name="Rebuild" Outputs="@(CollectedBuildOutput)">
+    <MSBuild Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" 
+             Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+  </Target>
+
+  <Target Name="PackRobocopyGui">
+    <ItemGroup>
+      <!-- Set the collection of files to Zip-->
+      <FilesToZip Include="$(OutDir)CommandLineGui.exe;$(OutDir)CommandLineGui.exe.config;$(OutDir)Fonlow.CommandLineGui.Core.dll;$(OutDir)Fonlow.CommandLineGui.Gui.dll;$(OutDir)RobocopyParameters.dll;$(OutDir)Fonlow.CommandLine.Antlr.dll;$(OutDir)Antlr4.Runtime.v4.0.dll"/>
+    </ItemGroup>
+    <!-- Create a zip file based on the FilesToZip collection -->
+    <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressFiles="@(FilesToZip)" RemoveRoot="$(OutDir)" ZipFileName="$(OutDir)CommandLineGui.zip"/>
+  </Target>
+
+
+</Project>
