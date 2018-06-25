@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC924877-C557-44CD-BBD6-03E2AC22D8AF}"
 	ProjectSection(SolutionItems) = preProject
@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		CoreInfo.cs = CoreInfo.cs
 		CustomDictionary.xml = CustomDictionary.xml
 		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBetter", "TestBetter\TestBetter.csproj", "{60BDAA55-6E8D-4167-88E1-7C46F7FC0536}"
@@ -85,6 +86,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FAD65C21-F5FA-4A98-9DBD-D45D5E513AA0} = {C2A40325-A59D-4FD6-A7E4-459A4F85D613}
 		{7B69F77E-72D1-404C-8176-F04D16B3EE8D} = {C2A40325-A59D-4FD6-A7E4-459A4F85D613}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {280C4A85-4AED-449F-96EB-4D1A65A6219D}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = CommandLineGui.vsmdi
