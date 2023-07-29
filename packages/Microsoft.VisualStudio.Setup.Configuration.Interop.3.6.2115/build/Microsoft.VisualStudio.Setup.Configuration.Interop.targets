@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="EmbedMicrosoftVisualStudioSetupConfigurationInteropTypes" AfterTargets="ResolveReferences" BeforeTargets="FindReferenceAssembliesForReferences">
+    <ItemGroup>
+      <ReferencePath Condition=" '%(FileName)' == 'Microsoft.VisualStudio.Setup.Configuration.Interop' AND '%(ReferencePath.NuGetPackageId)' == '$(MSBuildThisFileName)' ">
+        <EmbedInteropTypes>true</EmbedInteropTypes>
+        <Private>false</Private>
+      </ReferencePath>
+    </ItemGroup>
+  </Target>
+</Project>
