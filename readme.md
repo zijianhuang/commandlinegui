@@ -25,4 +25,10 @@ You may use the core library to wrap existing command line programs like Robocop
 **Remarks**
 
 * Command Line GUI was hosted at https://sourceforge.net/projects/commandlinegui/ since 2010, and is moved to https://github.com/zijianhuang/commandlinegui in 2018.
-* The project had started with .NET Framework 4, and the latest targets .NET Framework 4.8 as of 2023-07-29. And a .NET (Core) rewrite is on the way.
+
+
+## Maintainer Notices
+The project had started on .NET Framework 4, and the latest targets .NET Framework 4.8 as of 2023-07-29. And a .NET (Core) migration is on the way.
+
+
+
