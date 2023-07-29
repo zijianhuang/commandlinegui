@@ -40,6 +40,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fonlow.Cli.Core", "Fonlow.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fonlow.CliGui.Gui", "Fonlow.CliGui.Gui\Fonlow.CliGui.Gui.csproj", "{3FF47FA5-AD7B-4615-B2BE-800313FAFDFF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fonlow.CliGui", "Fonlow.CliGui\Fonlow.CliGui.csproj", "{A5EC4E1C-2691-45E7-80AE-E6385F13B617}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +92,10 @@ Global
 		{3FF47FA5-AD7B-4615-B2BE-800313FAFDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FF47FA5-AD7B-4615-B2BE-800313FAFDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FF47FA5-AD7B-4615-B2BE-800313FAFDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5EC4E1C-2691-45E7-80AE-E6385F13B617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5EC4E1C-2691-45E7-80AE-E6385F13B617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5EC4E1C-2691-45E7-80AE-E6385F13B617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5EC4E1C-2691-45E7-80AE-E6385F13B617}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
