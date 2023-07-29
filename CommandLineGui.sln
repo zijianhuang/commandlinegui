@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29503.13
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC924877-C557-44CD-BBD6-03E2AC22D8AF}"
 	ProjectSection(SolutionItems) = preProject
@@ -30,9 +30,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlossum", "MyPlossum\MyPl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{C2A40325-A59D-4FD6-A7E4-459A4F85D613}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntlrParser", "AntlrParser\AntlrParser.csproj", "{19DF59F3-8137-4422-B299-DF292E5C8EB9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAntl", "TestAntl\TestAntl.csproj", "{5091ACBA-45C5-4F34-AD5F-DAD1E61FE94A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fonlow.AntlrParser", "Fonlow.AntlrParser\Fonlow.AntlrParser.csproj", "{AE1E6B69-CD63-4F92-8AB9-B6A2D940E383}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,14 +64,14 @@ Global
 		{7B69F77E-72D1-404C-8176-F04D16B3EE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B69F77E-72D1-404C-8176-F04D16B3EE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B69F77E-72D1-404C-8176-F04D16B3EE8D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{19DF59F3-8137-4422-B299-DF292E5C8EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19DF59F3-8137-4422-B299-DF292E5C8EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19DF59F3-8137-4422-B299-DF292E5C8EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19DF59F3-8137-4422-B299-DF292E5C8EB9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5091ACBA-45C5-4F34-AD5F-DAD1E61FE94A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5091ACBA-45C5-4F34-AD5F-DAD1E61FE94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5091ACBA-45C5-4F34-AD5F-DAD1E61FE94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5091ACBA-45C5-4F34-AD5F-DAD1E61FE94A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1E6B69-CD63-4F92-8AB9-B6A2D940E383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1E6B69-CD63-4F92-8AB9-B6A2D940E383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1E6B69-CD63-4F92-8AB9-B6A2D940E383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1E6B69-CD63-4F92-8AB9-B6A2D940E383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

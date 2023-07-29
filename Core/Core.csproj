@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Fonlow.CommandLineGui</RootNamespace>
     <AssemblyName>Fonlow.CommandLineGui.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -118,12 +118,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AntlrParser\AntlrParser.csproj">
-      <Project>{19df59f3-8137-4422-b299-df292e5c8eb9}</Project>
-      <Name>AntlrParser</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -131,6 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="PackNupkg.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fonlow.AntlrParser\Fonlow.AntlrParser.csproj">
+      <Project>{ae1e6b69-cd63-4f92-8ab9-b6a2d940e383}</Project>
+      <Name>Fonlow.AntlrParser</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
