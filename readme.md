@@ -1,8 +1,8 @@
-Command Line GUI includes a command line arguments parser library for constructing .NET command line programs with complex arguments.
+Command Line GUI project includes a command line arguments parser library for constructing .NET Framework command line programs with complex arguments.
 
 You define a data model class decorated with some attributes for represeting arguments. The core library will parse the commaline arguments and populate the Plain Old CLR Object which is the router of the functionality of your command line program. And the Core library may also generates CLI help page.
 
-Command Line GUI is a host program that generates GUI for existing command line programs. .NET command line programs constructed through the core library could become a plugin of Command Line GUI and have the GUI generated.
+Command Line GUI exe is a host program that generates GUI for existing command line programs. .NET command line programs constructed through the core library could become a plugin of Command Line GUI and have the GUI generated.
 
 You may use the core library to wrap existing command line programs like Robocopy, and the wrapper may become a plugin, thus a native command line program could easily have a GUI. This project includes a primary plugin for Robocopy, which reassembles Better Robocopy GUI.
 
@@ -24,4 +24,5 @@ You may use the core library to wrap existing command line programs like Robocop
 
 **Remarks**
 
-Command Line GUI was hosted at https://sourceforge.net/projects/commandlinegui/ since 2010, and is moved to https://github.com/zijianhuang/commandlinegui in 2018.
+* Command Line GUI was hosted at https://sourceforge.net/projects/commandlinegui/ since 2010, and is moved to https://github.com/zijianhuang/commandlinegui in 2018.
+* The project had started with .NET Framework 4, and the latest targets .NET Framework 4.8 as of 2023-07-29. And a .NET (Core) rewrite is on the way.
