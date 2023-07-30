@@ -11,7 +11,7 @@ namespace TestAntlr
 			var dic = ArgumentParserResult.Parse("/abc  sdfd /efg  \"This is some\" ok").OptionsDictionary;
 			Assert.Equal(2, dic.Count);
 			Assert.Equal("abc", dic.First().Key);
-			Assert.Equal(1, dic["abc"].Length);
+			Assert.Single(dic["abc"]);
 			Assert.Equal(2, dic["efg"].Length);
 			Assert.Equal("This is some", dic["efg"][0]);
 		}
@@ -31,13 +31,13 @@ namespace TestAntlr
 			var dic = ArgumentParserResult.Parse("/s /lev:32 /copy:astou  /a+:RASH  /a-:CU  /256 /rh:1233-2356 /xf thisfile.txt \"c:\\test\\this dir\\something.txt\" /save:jobname").OptionsDictionary;
 			Assert.Equal(9, dic.Count);
 			Assert.Equal("s", dic.First().Key);
-			Assert.Equal(0, dic["s"].Length);
+			Assert.Empty(dic["s"]);
 			Assert.Equal(2, dic["xf"].Length);
 			Assert.Equal("32", dic["lev"][0]);
 			Assert.Equal("astou", dic["copy"][0]);
 			Assert.Equal("RASH", dic["a+"][0]);
 			Assert.Equal("CU", dic["a-"][0]);
-			Assert.Equal(0, dic["256"].Length);
+			Assert.Empty(dic["256"]);
 			Assert.Equal("1233-2356", dic["rh"][0]);
 			Assert.Equal("thisfile.txt", dic["xf"][0]);
 			Assert.Equal("c:\\test\\this dir\\something.txt", dic["xf"][1]);
@@ -48,7 +48,7 @@ namespace TestAntlr
 		public void TestSvcUtil()
 		{
 			var dic = ArgumentParserResult.Parse("/namespace:http://schemas.datacontract.org/2004/07/WcfService19,MyNamespace").OptionsDictionary;
-			Assert.Equal(1, dic.Count);
+			Assert.Single(dic);
 			Assert.Equal("namespace", dic.First().Key);
 			Assert.Equal("http://schemas.datacontract.org/2004/07/WcfService19,MyNamespace", dic["namespace"][0]);
 		}
@@ -59,8 +59,8 @@ namespace TestAntlr
 			var dic = ArgumentParserResult.Parse("-sk keyname -# 1234 -$ commercial -? -! -b 12/11/2014 -eku 123.456.789, 2244.2343.3 , 348.343 -nscp -sky exchange -sp \"Microsoft RSA SChannel Cryptographic Provider\" -sy 12 -n \"CN=XXZZYY\"").OptionsDictionary;
 			Assert.Equal(12, dic.Count);
 			Assert.Equal("sk", dic.First().Key);
-			Assert.Equal(0, dic["?"].Length);
-			Assert.Equal(0, dic["!"].Length);
+			Assert.Empty(dic["?"]);
+			Assert.Empty(dic["!"]);
 			Assert.Equal("12/11/2014", dic["b"][0]);
 			Assert.Equal("123.456.789,", dic["eku"][0]);
 			Assert.Equal("Microsoft RSA SChannel Cryptographic Provider", dic["sp"][0]);
@@ -73,7 +73,7 @@ namespace TestAntlr
 		public void TestMsBuild()
 		{
 			var dic = ArgumentParserResult.Parse("/p:Configuration=Release /p:X=Y ").OptionsDictionary;
-			Assert.Equal(1, dic.Count);
+			Assert.Single(dic);
 			Assert.Equal(2, dic["p"].Length);
 			Assert.Equal("Configuration=Release", dic["p"][0]);
 
@@ -84,7 +84,7 @@ namespace TestAntlr
 		{
 			var result = ArgumentParserResult.Parse("abc efg   \"this file is ok\"   /p:Configuration=Release /p:X=Y ");
 			var dic = result.OptionsDictionary;
-			Assert.Equal(1, dic.Count);
+			Assert.Single(dic);
 			Assert.Equal(2, dic["p"].Length);
 			Assert.Equal("Configuration=Release", dic["p"][0]);
 			var fixedParameters = result.FixedParameters.ToArray();
@@ -97,7 +97,7 @@ namespace TestAntlr
 		public void TestSilly()
 		{
 			var dic = ArgumentParserResult.Parse("abcde dsfdfd sdf").OptionsDictionary;
-			Assert.Equal(0, dic.Count);
+			Assert.Empty(dic);
 
 		}    
 	
