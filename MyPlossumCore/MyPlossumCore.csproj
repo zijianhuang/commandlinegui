@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<OutputType>Exe</OutputType>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="Essential.Diagnostics">
+			<HintPath>..\3rdParty\EssentialDiagnostics\Essential.Diagnostics.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Fonlow.CliGui.Core\Fonlow.CliGui.Core.csproj" />
+	</ItemGroup>
+	<PropertyGroup>
+
+		<AssemblyTitle>MyPlossum</AssemblyTitle>
+		<Company>Microsoft</Company>
+		<Product>MyPlossum</Product>
+		<Copyright>Copyright © Microsoft 2013</Copyright>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+	</PropertyGroup>
+</Project>
