@@ -1,0 +1,1 @@
+Both tests are fine with DotNet Test. However, VisualStudio Runner could not find tests. Even a newly created xUnit test project couuld not run properly. Puzzled?!
