@@ -28,7 +28,7 @@ You may use the core library to wrap existing command line programs like Robocop
 
 
 ## Maintainer Notices
-The project had started on .NET Framework 4, and the latest targets .NET Framework 4.8 as of 2023-07-29. And a .NET (Core) migration is on the way.
+The project had started on .NET Framework 4, and the latest targets .NET Framework 4.8 as of 2023-07-29. And a .NET (Core) migration is is hosted on [CliGui](https://github.com/zijianhuang/cligui).
 
 
 
