@@ -25,9 +25,13 @@ namespace Fonlow.CommandLineGui.Gui
 
         Dictionary<string, ICommand> commandsBuffer;
 
-        public MainForm(ICommand command)
+        readonly Settings settings;
+
+
+		public MainForm(ICommand command, Settings settings)
             : this()
         {
+            this.settings = settings;
             CreateEditorWindow();
             if (command == null)
                 throw new ArgumentNullException("command");
@@ -135,8 +139,8 @@ namespace Fonlow.CommandLineGui.Gui
         void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            Settings.Default.AssemblyNameOfCommand = defaultAssemblyName;
-            Settings.Default.Save();
+            settings.AssemblyNameOfCommand = defaultAssemblyName;
+            //Settings.Default.Save(); //todo: do I need to save
             CommandsTemplatesFile.Save(CommandsTemplates.Instance);
         }
 

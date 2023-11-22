@@ -1,73 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Configuration;
-using System.Diagnostics;
-
-namespace Fonlow.CommandLineGui
+﻿namespace Fonlow.CommandLineGui
 {
-    public sealed class Settings : ApplicationSettingsBase
-    {
+	public sealed class Settings
+	{
+		public string AssemblyNameOfCommand { get; set; } = "RobocopyParameters";
 
-        private static Settings defaultInstance = ((Settings)(ApplicationSettingsBase.Synchronized(new Settings())));
+		public string[] AssemblyNames { get; set; }
 
-        public static Settings Default
-        {
-            get
-            {
-                return defaultInstance;
-            }
-        }
+		public PluginAllocationMethod PluginAllocationMethod { get; set; } = PluginAllocationMethod.Mono;
 
-        [UserScopedSetting]
-        [DefaultSettingValue("RobocopyParameters")]
-        public string AssemblyNameOfCommand
-        {
-            get
-            {
-                return ((string)(this["AssemblyNameOfCommand"]));
-            }
+	}
 
-            set
-            {
-                this["AssemblyNameOfCommand"] = value;
-            }
-
-        }
-
-
-        [ApplicationScopedSetting]
-        public string[] AssemblyNames
-        {
-            get
-            {
-                return ((string[])(this["AssemblyNames"]));
-            }
-        }
-
-        [ApplicationScopedSetting]
-        [DefaultSettingValue("Mono")]
-        public PluginAllocationMethod PluginAllocationMethod
-        {
-            get
-            {
-                return ((PluginAllocationMethod)(this["PluginAllocationMethod"]));
-            }
-
-        }
-
-    }
-
-    /// <summary>
-    /// Mono: locate only one assembly in property AssemblyNameOfCommand,
-    /// Registration: plugin files in the same directory of commandLineGui.exe.
-    /// </summary>
-    public enum PluginAllocationMethod
-    {
-        Mono, 
-        Registration
-    };
+	/// <summary>
+	/// Mono: locate only one assembly in property AssemblyNameOfCommand,
+	/// Registration: plugin files in the same directory of commandLineGui.exe.
+	/// </summary>
+	public enum PluginAllocationMethod
+	{
+		Mono, 
+		Registration
+	};
 
 
 }
