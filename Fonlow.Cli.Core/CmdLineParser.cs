@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Fonlow.CommandLine
+namespace Fonlow.Cli
 {
     /// <summary>
     /// This class shares a subset of the interfaces of Plossum's CommandLineParser, as a replacement.

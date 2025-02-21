@@ -3,7 +3,8 @@ using System.Text;
 using System.ComponentModel;
 using System.Drawing.Design;
 using Plossum.CommandLine;
-using Fonlow.CommandLine;
+using Fonlow.Cli;
+using Fonlow.CliGui.Robocopy;
 
 namespace Fonlow.CommandLineGui.Robocopy
 {

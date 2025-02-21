@@ -7,7 +7,7 @@ using Plossum.CommandLine;
 using System.Reflection;
 using System.Diagnostics;
 
-namespace Fonlow.CommandLine
+namespace Fonlow.Cli
 {
     public static class OptionsValidator
     {

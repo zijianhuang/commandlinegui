@@ -6,7 +6,7 @@ using System.Reflection.Emit;
 using System.Linq;
 using Fonlow.CommandLine;
 
-namespace Fonlow.CommandLineGui
+namespace Fonlow.Cli
 {
     internal static class CommandTypeBuilder
     {

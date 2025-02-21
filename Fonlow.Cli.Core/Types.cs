@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Fonlow.CommandLineGui
+namespace Fonlow.Cli
 {
     /// <summary>
     /// Send the subscriber a text message

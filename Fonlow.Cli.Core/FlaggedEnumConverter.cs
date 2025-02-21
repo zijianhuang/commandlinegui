@@ -2,7 +2,7 @@
 using System.Text;
 using System.ComponentModel;
 
-namespace Fonlow.CommandLineGui
+namespace Fonlow.Cli
 {
     /// <summary>
     /// Explicityly convert a flagged enum into string or from int to string. Each flag of the enum can be represented by one character.

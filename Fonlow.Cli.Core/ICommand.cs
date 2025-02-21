@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Fonlow.CommandLineGui
+namespace Fonlow.Cli
 {
     public interface ICommand
     {

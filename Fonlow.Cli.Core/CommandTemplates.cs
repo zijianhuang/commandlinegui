@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 using System.Configuration;
 using System.IO;
 
-namespace Fonlow.CommandLineGui
+namespace Fonlow.Cli
 {
     /// <summary>
     /// To store templates for each command

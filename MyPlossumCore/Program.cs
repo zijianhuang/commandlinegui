@@ -1,6 +1,6 @@
 ﻿using System;
 using Plossum.CommandLine;
-using Fonlow.CommandLine;
+using Fonlow.Cli;
 
 namespace MyPlossum
 {

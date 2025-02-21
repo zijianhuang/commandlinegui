@@ -1,4 +1,4 @@
-﻿namespace Fonlow.CommandLineGui
+﻿namespace Fonlow.Cli
 {
 	public sealed class Settings
 	{

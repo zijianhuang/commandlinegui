@@ -33,7 +33,7 @@ using System.Text;
 using Plossum.CommandLine;
 using System.Linq;
 
-namespace Fonlow.CommandLine
+namespace Fonlow.Cli
 {
     /// <summary>
     /// Represents the properties of a <see cref="CommandLineManagerAttribute"/> (or rather the object to which its 

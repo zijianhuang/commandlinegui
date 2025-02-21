@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.ComponentModel;
 
-namespace Fonlow.CommandLine
+namespace Fonlow.Cli
 {
     public static class PropertyHelper
     {

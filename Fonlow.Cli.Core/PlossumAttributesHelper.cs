@@ -4,7 +4,7 @@ using System.Linq;
 using Plossum.CommandLine;
 using System.Reflection;
 
-namespace Fonlow.CommandLine
+namespace Fonlow.Cli
 {
     public static class PlossumAttributesHelper
     {

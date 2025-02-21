@@ -1,7 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
+using Fonlow.Cli;
 
-namespace Fonlow.CommandLineGui.Robocopy
+namespace Fonlow.CliGui.Robocopy
 {
     [Flags]
     [TypeConverter(typeof(FlaggedEnumConverter<CopyFlags>))]

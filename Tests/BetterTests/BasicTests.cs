@@ -1,17 +1,13 @@
-﻿using System;
-using System.Linq;
-using Xunit;
-using Fonlow.CommandLineGui;
-using Fonlow.CommandLineGui.Robocopy;
+﻿using Fonlow.Cli;
 using System.ComponentModel;
-using Fonlow.CommandLine;
+using Fonlow.CliGui.Robocopy;
 
 namespace TestBetter
 {
 	/// <summary>
 	/// Summary description for UnitTest1
 	/// </summary>
-	 
+
 	public class BasicTests
 	{
 		public BasicTests()

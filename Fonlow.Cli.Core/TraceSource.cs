@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 
-namespace Fonlow.CommandLineGui
+namespace Fonlow.Cli
 {
     public sealed class AppTraceSource : TraceSource
     {

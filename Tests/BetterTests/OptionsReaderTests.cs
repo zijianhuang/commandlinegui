@@ -1,6 +1,6 @@
 ﻿using System;
 using Xunit;
-using Fonlow.CommandLine;
+using Fonlow.Cli;
 
 namespace TestBetter
 {

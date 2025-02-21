@@ -6,7 +6,7 @@ using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using Fonlow.CommandLine.Antlr;
 
-namespace Fonlow.CommandLine
+namespace Fonlow.Cli
 {
 	public class ArgumentParserResult
 	{

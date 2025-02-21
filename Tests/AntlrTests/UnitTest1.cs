@@ -1,4 +1,4 @@
-﻿using Fonlow.CommandLine;
+﻿using Fonlow.Cli;
 
 namespace TestAntlr
 {

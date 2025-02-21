@@ -5,7 +5,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Reflection;
 
-namespace Fonlow.CommandLine
+namespace Fonlow.Cli
 {
     /// <summary>
     /// Reader options text and put values to options.
