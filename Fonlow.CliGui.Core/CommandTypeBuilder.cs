@@ -92,12 +92,6 @@ namespace Fonlow.CommandLineGui
                             CreateCustomAttributeWith1ParameterCtorOfProperty(propertyBuilder, typeof(DefaultValueAttribute), propertyItem.PropertyType, fixedParameterAttribute.DefaultValue);
                         }
                     }
-
-                    var editorAttribute = ReadEditorAttribute(propertyItem);
-                    if (editorAttribute != null)
-                    {
-                        CreateEditorAttributeOfProperty(propertyBuilder, Type.GetType(editorAttribute.EditorTypeName));
-                    }
                 }
                 else
                 {
@@ -155,13 +149,6 @@ namespace Fonlow.CommandLineGui
                         }
                     }
 
-
-                    var editorAttribute = ReadEditorAttribute(propertyItem);
-                    if (editorAttribute != null)
-                    {
-                        CreateEditorAttributeOfProperty(propertyBuilder, Type.GetType(editorAttribute.EditorTypeName));
-                    }
-
                     CopyCommandLineOptionAttributeOfProperty(propertyBuilder, optionAttribute);
 
 
@@ -188,30 +175,6 @@ namespace Fonlow.CommandLineGui
             var classCtorInfo = typeOfAttribute.GetConstructor(new Type[] { typeOfCtorParameter });
             CustomAttributeBuilder customAttributeBuilder = new CustomAttributeBuilder(classCtorInfo, new object[] { valueOfCtorParameter });
             propertyBuilder.SetCustomAttribute(customAttributeBuilder);
-        }
-
-        static void CreateEditorAttributeOfProperty(PropertyBuilder propertyBuilder, Type typeOfCustomEditor)
-        {
-            Type typeOfEditorAttribute = typeof(EditorAttribute);
-
-            var classCtorInfo = typeOfEditorAttribute.GetConstructor(new Type[] { typeof(Type), typeof(Type) });
-            CustomAttributeBuilder customAttributeBuilder = new CustomAttributeBuilder(classCtorInfo, new object[] { typeOfCustomEditor, typeof(System.Drawing.Design.UITypeEditor) });
-            propertyBuilder.SetCustomAttribute(customAttributeBuilder);
-        }
-
-        static EditorAttribute ReadEditorAttribute(MemberInfo memberInfo)
-        {
-            if (memberInfo == null)
-            {
-                throw new ArgumentNullException("memberInfo");
-            }
-
-            object[] objects = memberInfo.GetCustomAttributes(typeof(EditorAttribute), false);
-            if (objects.Length == 1)
-            {
-                return (objects[0] as EditorAttribute);
-            }
-            return null;
         }
 
         static void CopyCommandLineOptionAttributeOfProperty(PropertyBuilder propertyBuilder, CommandLineOptionAttribute attribute)

@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Fonlow.CommandLine;
+using Plossum.CommandLine;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Reflection;
-using Plossum.CommandLine;
-using System.Linq;
-using Fonlow.CommandLine;
 
 namespace Fonlow.CommandLineGui
 {
-    public sealed class CommandFactory
+	public sealed class CommandFactory
     {
         CommandFactory()
         {
