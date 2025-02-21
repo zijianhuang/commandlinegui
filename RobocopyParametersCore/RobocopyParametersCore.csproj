@@ -56,7 +56,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Fonlow.CliGui.Core\Fonlow.CliGui.Core.csproj" />
+    <ProjectReference Include="..\Fonlow.Cli.Core\Fonlow.Cli.Core.csproj" />
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>copy $(TargetPath) $(SolutionDir)Fonlow.CliGui\$(OutDir)</PostBuildEvent>

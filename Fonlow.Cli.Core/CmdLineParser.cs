@@ -186,7 +186,8 @@ namespace Fonlow.Cli
 
         static bool SplitCommandLine(string commandLine, out string command, out string argsText)
         {
-            Regex regex = new Regex(Fonlow.Cli.Core.Resources.filePathPattern, RegexOptions.IgnorePatternWhitespace);
+			// regex: \w+([\.]\w+)*|("(([a-zA-Z]:)|(\\\\[^/\\:\*\?""<>\|]+(\\[a-zA-Z]\$)?))\\([^/\\:\*\?""<>\|]+\\)*[^/\\:\*\?""<>\|]+(\.[^/\\:\*\?""<>\|]+[^/\\:\*\?""<>\|\s])?") |((([a-zA-Z]:)|(\\\\[^/\\:\*\?""<>\|\s]+(\\[a-zA-Z]\$)?))\\([^/\\:\*\?""<>\|\s]+\\)*[^/\\:\*\?""<>\|\s]+(\.[a-zA-Z0-9]+)?)
+			Regex regex = new Regex("\\w+([\\.]\\w+)*|(\"(([a-zA-Z]:)|(\\\\\\\\[^/\\\\:\\*\\?\"\"<>\\|]+(\\\\[a-zA-Z]\\$)?))\\\\([^/\\\\:\\*\\?\"\"<>\\|]+\\\\)*[^/\\\\:\\*\\?\"\"<>\\|]+(\\.[^/\\\\:\\*\\?\"\"<>\\|]+[^/\\\\:\\*\\?\"\"<>\\|\\s])?\") |((([a-zA-Z]:)|(\\\\\\\\[^/\\\\:\\*\\?\"\"<>\\|\\s]+(\\\\[a-zA-Z]\\$)?))\\\\([^/\\\\:\\*\\?\"\"<>\\|\\s]+\\\\)*[^/\\\\:\\*\\?\"\"<>\\|\\s]+(\\.[a-zA-Z0-9]+)?)", RegexOptions.IgnorePatternWhitespace);
             var match = regex.Match(commandLine);
             if (match.Success)
             {

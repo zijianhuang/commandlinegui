@@ -7,9 +7,7 @@
 	<ItemGroup>
 		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
 	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\Fonlow.CliGui.Core\Fonlow.CliGui.Core.csproj" />
-	</ItemGroup>
+
 	<PropertyGroup>
 
 		<AssemblyTitle>MyPlossum</AssemblyTitle>

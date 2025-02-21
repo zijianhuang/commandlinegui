@@ -152,7 +152,7 @@ namespace Fonlow.Cli
             if (ApplicationVersion != null)
             {
                 result.Append("  ");
-                result.Append(Fonlow.Cli.Core.Resources.Version);
+                result.Append("version");
                 result.Append(' ');
                 result.Append(ApplicationVersion);
             }
@@ -176,7 +176,7 @@ namespace Fonlow.Cli
            
             if (parser.OptionAttributes.Length>0)
             {
-                builder.AppendLine(Fonlow.Cli.Core.Resources.Options);
+                builder.AppendLine("version");
                 var optionAttributesGrouped = parser.OptionAttributes.GroupBy(d => d.GroupId).OrderBy(k=>k.Key);
 
                 foreach (var optionsInGroup in optionAttributesGrouped)
