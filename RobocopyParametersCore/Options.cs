@@ -97,7 +97,7 @@ namespace Fonlow.CommandLineGui.Robocopy
 
 
 
-        [Editor(typeof(CopyFlagsEditor), typeof(UITypeEditor))]
+        //[Editor(typeof(CopyFlagsEditor), typeof(UITypeEditor))]
         [CommandLineOption(Name = "COPY", GroupId = OptionGroups.COPY_OPTIONS,
             Description = "Copies the file information specified by copyflags, which can be any combination of the following :" + "\n\r" +
 "D – file Data. S – file Security (NTFS ACLs)." + "\n\r" +
@@ -192,7 +192,7 @@ namespace Fonlow.CommandLineGui.Robocopy
 
 
 
-        [Editor(typeof(RashFlagsEditor), typeof(UITypeEditor))]
+        //[Editor(typeof(RashFlagsEditor), typeof(UITypeEditor))]
         [CommandLineOption(Name = "A+", GroupId = OptionGroups.COPY_OPTIONS,
             Description = "Sets the specified attributes in copied files.\n\rThe following attributes can be set:\n\r" +
 "R – Read only S – System N – Not content indexed\n\rA – Archive H – Hidden T – Temporary")]
@@ -208,7 +208,7 @@ namespace Fonlow.CommandLineGui.Robocopy
 
 
 
-        [Editor(typeof(RashFlagsEditor), typeof(UITypeEditor))]
+        //[Editor(typeof(RashFlagsEditor), typeof(UITypeEditor))]
         [CommandLineOption(Name = "A-", GroupId = OptionGroups.COPY_OPTIONS,
             Description = "Turns off the specified attributes in copied files.\n\rThe following attributes can be turned off:\n\r" +
 "R – Read only S – System N – Not content indexed\n\rA – Archive H – Hidden T – Temporary")]
@@ -279,13 +279,13 @@ namespace Fonlow.CommandLineGui.Robocopy
         public bool SlashM { get; set; }
 
 
-        [Editor(typeof(RashFlagsEditor), typeof(UITypeEditor))]
+        //[Editor(typeof(RashFlagsEditor), typeof(UITypeEditor))]
         [CommandLineOption(Name = "IA", GroupId = OptionGroups.FILE_SELECTION_OPTIONS,
             Description = "Includes files with the specified attributes.\n\rThe following file attributes can be acted upon:\n\r" +
 "R – Read only A – Archive S – System\n\rH – Hidden C – Compressed N – Not content indexed\n\rE – Encrypted T – Temporary O - Offline")]
         public Rashcneto SlashIa { get; set; }
 
-        [Editor(typeof(RashFlagsEditor), typeof(UITypeEditor))]
+        //[Editor(typeof(RashFlagsEditor), typeof(UITypeEditor))]
         [CommandLineOption(Name = "XA", GroupId = OptionGroups.FILE_SELECTION_OPTIONS,
             Description = "Excludes files with the specified attributes.\n\rThe following file attributes can be acted upon:\n\r" +
 "R – Read only A – Archive S – System\n\rH – Hidden C – Compressed N – Not content indexed\n\rE – Encrypted T – Temporary O - Offline")]

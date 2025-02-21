@@ -1,14 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net8.0-windows7.0</TargetFramework>
+		<TargetFramework>net9.0-windows7.0</TargetFramework>
 		<OutputType>Exe</OutputType>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="Essential.Diagnostics">
-			<HintPath>..\3rdParty\EssentialDiagnostics\Essential.Diagnostics.dll</HintPath>
-		</Reference>
-	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
 	</ItemGroup>
